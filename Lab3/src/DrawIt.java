@@ -57,6 +57,9 @@ public class DrawIt  implements Runnable {
 		thicknessToolbar.addbutton("Heavy", 10);
 		thicknessToolbar.addbutton("Intermediate", 6);
 		thicknessToolbar.addbutton("Light", 2);
+		thicknessToolbar.addbutton("Smudge", 12);
+		thicknessToolbar.addbutton("Spray Paint", 13);
+		thicknessToolbar.addbutton("Area Flood Fill", 14);
 		jf.getContentPane().add(thicknessToolbar, BorderLayout.LINE_END);
 
 		// create a toolbar for opacity
@@ -86,15 +89,6 @@ public class DrawIt  implements Runnable {
 		});
 		bar.add(jmfile);
 		jf.setJMenuBar(bar);
-
-		jmFunction = new JMenu("Function");
-		jmSmudge = new JMenuItem("Smudge");
-		jmFunction.add(jmSmudge);
-		jmSparyPaint = new JMenuItem("Spray Paint");
-		jmFunction.add(jmSparyPaint);
-		jmFloodFill = new JMenuItem("Area Flood Fill");
-		jmFunction.add(jmFloodFill);
-		bar.add(jmFunction);
 
 		jf.pack();
 		jf.setVisible(true);
