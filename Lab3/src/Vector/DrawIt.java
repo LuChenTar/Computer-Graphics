@@ -1,9 +1,13 @@
+package Vector;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
@@ -26,13 +30,9 @@ public class DrawIt  implements Runnable {
 	DrawArea da;
 	JMenuBar bar;
 	JMenu jmfile;
-	JMenu jmFunction;
 	JMenuItem jmiquit, jmiexport;
-	JMenuItem jmSmudge, jmSparyPaint, jmFloodFill;
 	ToolBar colorToolbar;
-	ToolBar thicknessToolbar;
-	ToolBar OpacityToolbar;
-
+	
 	public DrawIt() {
 		SwingUtilities.invokeLater(this);
 	}
@@ -42,33 +42,15 @@ public class DrawIt  implements Runnable {
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		da = new DrawArea(dim,this);
 		//da.setFocusable(true);
-		jf.getContentPane().add(da, BorderLayout.LINE_START);
-
-		// create a toolbar for color
+		jf.getContentPane().add(da,BorderLayout.CENTER);
+		
+		// create a toolbar
 		colorToolbar = new ToolBar(BoxLayout.Y_AXIS);
 		colorToolbar.addbutton("Red", Color.RED);
 		colorToolbar.addbutton("Blue", Color.BLUE);
 		colorToolbar.addbutton("Green", Color.GREEN);
-		colorToolbar.addbutton("Erase", Color.WHITE);
-		jf.getContentPane().add(colorToolbar, BorderLayout.CENTER);
-
-		// create a toolbar for thickness
-		thicknessToolbar = new ToolBar(BoxLayout.Y_AXIS);
-		thicknessToolbar.addbutton("Heavy", 10);
-		thicknessToolbar.addbutton("Intermediate", 6);
-		thicknessToolbar.addbutton("Light", 2);
-		thicknessToolbar.addbutton("Smudge", 12);
-		thicknessToolbar.addbutton("Spray Paint", 13);
-		thicknessToolbar.addbutton("Area Flood Fill", 14);
-		jf.getContentPane().add(thicknessToolbar, BorderLayout.LINE_END);
-
-		// create a toolbar for opacity
-		OpacityToolbar = new ToolBar(BoxLayout.Y_AXIS);
-		OpacityToolbar.addbutton("Opaque", 1.0f);
-		OpacityToolbar.addbutton("Semi-transparent", 0.1f);
-		OpacityToolbar.addbutton("Transparent", 0.0f);
-		jf.getContentPane().add(OpacityToolbar, BorderLayout.AFTER_LAST_LINE);
-
+		jf.getContentPane().add(colorToolbar,BorderLayout.LINE_END);
+		
 		// create some menus
 		bar = new JMenuBar();
 		jmfile = new JMenu("File");
@@ -77,19 +59,17 @@ public class DrawIt  implements Runnable {
 		jmiexport.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				da.export(new File("export.png"));
-			}
-		});
-
+			}});
+		
 		jmiquit = new JMenuItem("Quit");
 		jmfile.add(jmiquit);
 		jmiquit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
-			}
-		});
+			}});
 		bar.add(jmfile);
 		jf.setJMenuBar(bar);
-
+		
 		jf.pack();
 		jf.setVisible(true);
 	}
