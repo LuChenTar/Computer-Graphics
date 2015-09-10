@@ -50,6 +50,7 @@ public class ScreenSaverOGL implements GLEventListener {
 
 	float xpos;
 	float xvel;
+	float rtri = 0.0f;
 
 	public ScreenSaverOGL() {
 		jf = new JFrame();
@@ -99,7 +100,42 @@ public class ScreenSaverOGL implements GLEventListener {
 		gl2.glRasterPos2f(xpos, 300.0f);
 		glut.glutBitmapString(GLUT.BITMAP_HELVETICA_18, "Save the Screens");
 		gl2.glFlush();
-		
+
+		gl2.glPushMatrix();
+		gl2.glRotatef(rtri, 0.0f, 1.0f, 0.0f);//(NEW!)
+		gl2.glBegin(GL2.GL_TRIANGLES);                      // Drawing Using Triangles
+
+//		COORDINATES
+	/*
+			 * Front
+			 */
+		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Front)
+		gl2.glVertex3f(100.0f, 0.0f, 200.0f); // Left Of Triangle (Front)
+		gl2.glVertex3f(200.0f, 0.0f, 200.0f); // Right Of Triangle (Front)
+			/*
+			 * Right
+			 */
+		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Right)
+		gl2.glVertex3f(200.0f, 0.0f, 200.0f); // Left Of Triangle (Right)
+		gl2.glVertex3f(200.0f, 0.0f, 0.0f); // Right Of Triangle (Right)
+			/*
+			 * Left
+			 */
+		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Back)
+		gl2.glVertex3f(200.0f, 0.0f, 0.0f); // Left Of Triangle (Back)
+		gl2.glVertex3f(0.0f, 0.0f, 0.0f); // Right Of Triangle (Back)
+			/*
+			 *
+			 */
+		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Left)
+		gl2.glVertex3f(0.0f, 0.0f, 0.0f); // Left Of Triangle (Left)
+		gl2.glVertex3f(0.0f, 0.0f, 200.0f); // Right Of Triangle (Left)
+
+
+		gl2.glEnd(); // Done Drawing The Pyramid
+		gl2.glPopMatrix();
+
+		rtri += 0.2f;
 		xpos += xvel;
 		if (xpos > dim.getWidth())
 			xpos = 0.0f;
