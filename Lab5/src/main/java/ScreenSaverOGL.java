@@ -1,4 +1,6 @@
 import java.awt.Dimension;
+import java.io.File;
+import java.io.IOException;
 
 import com.jogamp.opengl.GL;
 import com.jogamp.opengl.GL2;
@@ -11,10 +13,10 @@ import com.jogamp.opengl.GLEventListener;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.util.gl2.GLUT;
 import javax.swing.JFrame;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import com.jogamp.opengl.util.FPSAnimator;
 
+import com.jogamp.opengl.util.FPSAnimator;
+import com.jogamp.opengl.util.texture.Texture;
+import com.jogamp.opengl.util.texture.TextureIO;
 
 
 public class ScreenSaverOGL implements GLEventListener {
@@ -50,7 +52,6 @@ public class ScreenSaverOGL implements GLEventListener {
 
 	float xpos;
 	float xvel;
-	float rtri = 0.0f;
 
 	public ScreenSaverOGL() {
 		jf = new JFrame();
@@ -77,16 +78,18 @@ public class ScreenSaverOGL implements GLEventListener {
        
            
         public void init(GLAutoDrawable dr) {  // set up openGL for 2D drawing
-		GL2 gl2 = dr.getGL().getGL2();
-		GLU glu = new GLU();
-		GLUT glut = new GLUT();
-		gl2.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-		gl2.glMatrixMode(GL2.GL_PROJECTION);
-                gl2.glLoadIdentity();
-		glu.gluOrtho2D(0.0, dim.getWidth(), 0.0, dim.getHeight());
-                gl2.glMatrixMode(GL2.GL_MODELVIEW);
-                gl2.glLoadIdentity();
-	}
+			GL2 gl2 = dr.getGL().getGL2();
+			GLU glu = new GLU();
+			GLUT glut = new GLUT();
+			gl2.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+			gl2.glEnable(GL2.GL_DEPTH_TEST);
+			gl2.glMatrixMode(GL2.GL_PROJECTION);
+			gl2.glLoadIdentity();
+			glu.gluPerspective(60.0, 1.0, 100.0, 1000.0);
+			gl2.glMatrixMode(GL2.GL_MODELVIEW);
+			gl2.glLoadIdentity();
+			glu.gluLookAt(100.0, 100.0, 500.0, 100.0, 100.0, 25.0, 0.0, 1.0, 0.0);
+		}
 
 
 	public void display(GLAutoDrawable dr) {  // clear the screen and draw "Save the Screens"
@@ -94,51 +97,126 @@ public class ScreenSaverOGL implements GLEventListener {
 		GLU glu = new GLU();
 		GLUT glut = new GLUT();
 
-		gl2.glClear(GL.GL_COLOR_BUFFER_BIT);
+		gl2.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
 
 		gl2.glColor3f(1.0f, 0.0f, 0.0f);
-		gl2.glRasterPos2f(xpos, 300.0f);
+		gl2.glRasterPos3f(xpos, 300.0f , 0.0f);
 		glut.glutBitmapString(GLUT.BITMAP_HELVETICA_18, "Save the Screens");
-		gl2.glFlush();
 
 		gl2.glPushMatrix();
-		gl2.glRotatef(rtri, 0.0f, 1.0f, 0.0f);//(NEW!)
-		gl2.glBegin(GL2.GL_TRIANGLES);                      // Drawing Using Triangles
+		gl2.glRotated(xpos, 0.0, 1.0, 0.0);
 
-//		COORDINATES
-	/*
-			 * Front
-			 */
-		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Front)
-		gl2.glVertex3f(100.0f, 0.0f, 200.0f); // Left Of Triangle (Front)
-		gl2.glVertex3f(200.0f, 0.0f, 200.0f); // Right Of Triangle (Front)
-			/*
-			 * Right
-			 */
-		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Right)
-		gl2.glVertex3f(200.0f, 0.0f, 200.0f); // Left Of Triangle (Right)
-		gl2.glVertex3f(200.0f, 0.0f, 0.0f); // Right Of Triangle (Right)
-			/*
-			 * Left
-			 */
-		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Back)
-		gl2.glVertex3f(200.0f, 0.0f, 0.0f); // Left Of Triangle (Back)
-		gl2.glVertex3f(0.0f, 0.0f, 0.0f); // Right Of Triangle (Back)
-			/*
-			 *
-			 */
-		gl2.glVertex3f(100.0f, 200.0f, 100.0f); // Top Of Triangle (Left)
-		gl2.glVertex3f(0.0f, 0.0f, 0.0f); // Left Of Triangle (Left)
-		gl2.glVertex3f(0.0f, 0.0f, 200.0f); // Right Of Triangle (Left)
+		//first polygon
+		gl2.glColor3f(1.0f, 0.0f, 0.0f);
+		Polygoncreator(gl2);
 
+		//second polygon
+		gl2.glTranslated(20.0, 20.0, 20.0);
+		gl2.glColor3f(0.0f, 0.0f, 1.0f);
+		Polygoncreator(gl2);
 
-		gl2.glEnd(); // Done Drawing The Pyramid
+		//third polygon
+		gl2.glTranslated(40.0, 40.0, 40.0);
+		gl2.glColor3f(0.0f, 1.0f, 0.0f);
+		Polygoncreator(gl2);
+
+		//forth polygon
+		gl2.glTranslated(60.0, 60.0, 60.0);
+		gl2.glColor3f(1.0f, 1.0f, 1.0f);
+		Polygoncreator(gl2);
 		gl2.glPopMatrix();
 
-		rtri += 0.2f;
+		//vegemite matrix
+		gl2.glPushMatrix();
+		gl2.glRotated(xpos, 0.0, -20.0, 0.0);
+
+		//first vegemite
+		gl2.glTranslated(-300.0, 0.0, 0.0);
+		vegemiteCreator(gl2);
+
+		//second vegemite
+		gl2.glTranslated(-100.0, 20.0, 0.0);
+		vegemiteCreator(gl2);
+
+		//third vegemite
+		gl2.glTranslated(-100.0, 40.0, 0.0);
+		vegemiteCreator(gl2);
+
+		//forth vegemite
+		gl2.glTranslated(-100.0, 40.0, 0.0);
+		vegemiteCreator(gl2);
+		gl2.glPopMatrix();
+
+		gl2.glFlush();
+
 		xpos += xvel;
 		if (xpos > dim.getWidth())
 			xpos = 0.0f;
+	}
+
+	private void Polygoncreator(GL2 gl2) {
+		gl2.glBegin(GL2.GL_POLYGON);
+		gl2.glVertex3d(0.0, 0.0, 0.0);
+		gl2.glVertex3d(100.0, 0.0,0.0);
+		gl2.glVertex3d(100.0, 50.0,0.0);
+		gl2.glVertex3d(0.0, 50.0,0.0);
+		gl2.glEnd();
+	}
+
+	private void vegemiteCreator(GL2 gl2) {
+		gl2.glColor3f(1.0f, 1.0f, 0.0f);
+		//vegemite container start
+		//lid
+		gl2.glBegin(GL2.GL_POLYGON);
+		gl2.glVertex3d(140.0, 0.0, 0.0);
+		gl2.glVertex3d(220.0, 0.0, 0.0);
+		gl2.glVertex3d(220.0, 20.0, 0.0);
+		gl2.glVertex3d(140.0, 20.0, 0.0);
+		gl2.glEnd();
+
+		//body
+		gl2.glColor3f(0.627f, 0.314f, 0.067f);
+
+		gl2.glBegin(GL2.GL_POLYGON);
+		gl2.glVertex3d(150.0, -10.0, 0.0);
+		gl2.glVertex3d(145.0, -20.0, 0.0);
+		gl2.glVertex3d(215.0, -20.0, 0.0);
+		gl2.glVertex3d(210.0, -10.0 ,0.0);
+		gl2.glVertex3d(210.0, 0.0, 0.0);
+		gl2.glVertex3d(150.0, 0.0, 0.0);
+		gl2.glEnd();
+
+		//body image
+		gl2.glColor3f(1.0f, 1.0f, 1.0f);
+		gl2.glEnable(GL2.GL_TEXTURE_2D);
+		try{
+			File im = new File("vegemite.png");
+			Texture t = TextureIO.newTexture(im, false);
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		gl2.glBegin(GL2.GL_QUADS);
+		{
+			gl2.glTexCoord3f(0.0f, 0.0f, 0.0f);
+			gl2.glVertex3d(145.0, -20.0, 0.0);
+			gl2.glTexCoord3f(1.0f, 0.0f, 0.0f);
+			gl2.glVertex3d(145.0, -70, 0.0);
+			gl2.glTexCoord3f(1.0f, 1.0f, 0.0f);
+			gl2.glVertex3d(215.0, -70.0, 0.0);
+			gl2.glTexCoord3f(0.0f, 1.0f, 0.0f);
+			gl2.glVertex3d(215.0, -20.0, 0.0);
+		};
+		gl2.glEnd();
+		gl2.glDisable(GL2.GL_TEXTURE_2D);
+
+		//bottom
+		gl2.glColor3f(0.627f, 0.314f, 0.067f);
+		gl2.glBegin(GL2.GL_POLYGON);
+		gl2.glVertex3d(145.0, -70.0, 0.0);
+		gl2.glVertex3d(150.0, -90.0, 0.0);
+		gl2.glVertex3d(210.0, -90.0 ,0.0);
+		gl2.glVertex3d(215.0, -70.0, 0.0);
+		gl2.glEnd();
 	}
 
         public void dispose( GLAutoDrawable glautodrawable ) {
