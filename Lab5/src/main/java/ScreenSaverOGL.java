@@ -145,6 +145,7 @@ public class ScreenSaverOGL implements GLEventListener {
 		//forth vegemite
 		gl2.glTranslated(-100.0, 40.0, 0.0);
 		vegemiteCreator(gl2);
+
 		gl2.glPopMatrix();
 
 		gl2.glFlush();
