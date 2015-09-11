@@ -24,28 +24,28 @@ public class ScreenSaverOGL implements GLEventListener {
 	/**
 	 * ScreenSaverOGL - this is a simple screen saver that uses JOGL2 
 	 * Eric McCreath 2009, 2011, 2015
-	 * 
+	 *
 	 * You need to include the jogl jar files (gluegen-rt.jar and jogl.jar). In
 	 * eclipse use "add external jars" in Project->Properties->Libaries
 	 * otherwise make certain they are in the class path.  In the current linux 
-         * computers there files are in the /usr/share/java directory.
-	 * 
-         * If you are executing from the command line then something like:
-         *   javac -cp .:/usr/share/java/jogl2.jar:/usr/share/java/gluegen2-2.2.4-rt.jar ScreenSaverOGL.java
-         *   java -cp .:/usr/share/java/jogl2.jar:/usr/share/java/gluegen2-2.2.4-rt.jar ScreenSaverOGL
-         * should work.
-         *
-         * On our lab machine you may also need to check you are using Java 7.  
-         * You can run it directly using:
-         *    /usr/lib/jvm/java-7-openjdk-amd64/bin/javac
-         * and 
-         *    /usr/lib/jvm/java-7-openjdk-amd64/bin/java
-	 * 
+	 * computers there files are in the /usr/share/java directory.
+	 *
+	 * If you are executing from the command line then something like:
+	 *   javac -cp .:/usr/share/java/jogl2.jar:/usr/share/java/gluegen2-2.2.4-rt.jar ScreenSaverOGL.java
+	 *   java -cp .:/usr/share/java/jogl2.jar:/usr/share/java/gluegen2-2.2.4-rt.jar ScreenSaverOGL
+	 * should work.
+	 *
+	 * On our lab machine you may also need to check you are using Java 7.
+	 * You can run it directly using:
+	 *    /usr/lib/jvm/java-7-openjdk-amd64/bin/javac
+	 * and
+	 *    /usr/lib/jvm/java-7-openjdk-amd64/bin/java
+	 *
 	 */
 
 	JFrame jf;
 	GLCanvas canvas;
-        GLProfile profile;
+	GLProfile profile;
 	GLCapabilities caps;
 	Dimension dim = new Dimension(800, 600);
 	FPSAnimator animator;
@@ -55,7 +55,7 @@ public class ScreenSaverOGL implements GLEventListener {
 
 	public ScreenSaverOGL() {
 		jf = new JFrame();
-                profile = GLProfile.getDefault();
+		profile = GLProfile.getDefault();
 		caps = new GLCapabilities(profile);
 		canvas = new GLCanvas(caps);
 		canvas.addGLEventListener(this);
@@ -75,21 +75,21 @@ public class ScreenSaverOGL implements GLEventListener {
 		new ScreenSaverOGL();
 	}
 
-       
-           
-        public void init(GLAutoDrawable dr) {  // set up openGL for 2D drawing
-			GL2 gl2 = dr.getGL().getGL2();
-			GLU glu = new GLU();
-			GLUT glut = new GLUT();
-			gl2.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-			gl2.glEnable(GL2.GL_DEPTH_TEST);
-			gl2.glMatrixMode(GL2.GL_PROJECTION);
-			gl2.glLoadIdentity();
-			glu.gluPerspective(60.0, 1.0, 100.0, 1000.0);
-			gl2.glMatrixMode(GL2.GL_MODELVIEW);
-			gl2.glLoadIdentity();
-			glu.gluLookAt(100.0, 100.0, 500.0, 100.0, 100.0, 25.0, 0.0, 1.0, 0.0);
-		}
+
+
+	public void init(GLAutoDrawable dr) {  // set up openGL for 2D drawing
+		GL2 gl2 = dr.getGL().getGL2();
+		GLU glu = new GLU();
+		GLUT glut = new GLUT();
+		gl2.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+		gl2.glEnable(GL2.GL_DEPTH_TEST);
+		gl2.glMatrixMode(GL2.GL_PROJECTION);
+		gl2.glLoadIdentity();
+		glu.gluPerspective(60.0, 1.0, 100.0, 1000.0);
+		gl2.glMatrixMode(GL2.GL_MODELVIEW);
+		gl2.glLoadIdentity();
+		glu.gluLookAt(100.0, 100.0, 500.0, 100.0, 100.0, 25.0, 0.0, 1.0, 0.0);
+	}
 
 
 	public void display(GLAutoDrawable dr) {  // clear the screen and draw "Save the Screens"
@@ -164,6 +164,11 @@ public class ScreenSaverOGL implements GLEventListener {
 		gl2.glEnd();
 	}
 
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
 	private void vegemiteCreator(GL2 gl2) {
 		gl2.glColor3f(1.0f, 1.0f, 0.0f);
 		//vegemite container start
@@ -220,10 +225,10 @@ public class ScreenSaverOGL implements GLEventListener {
 		gl2.glEnd();
 	}
 
-        public void dispose( GLAutoDrawable glautodrawable ) {
-        }
-	
+	public void dispose( GLAutoDrawable glautodrawable ) {
+	}
+
 	public void reshape(GLAutoDrawable dr, int x, int y, int width,
-			int height) {
+						int height) {
 	}
 }
