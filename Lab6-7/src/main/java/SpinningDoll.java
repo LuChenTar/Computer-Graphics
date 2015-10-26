@@ -257,7 +257,7 @@ public class SpinningDoll implements GLEventListener, MouseMotionListener, Mouse
         System.out.println("speed" + Math.abs(end - start)/ Math.abs(endtime-starttime));
         System.out.println("time" + Math.abs(endtime-starttime) * Math.pow(10.0, -6.0));
 
-        if (Math.abs(end - start)/ Math.abs(endtime-starttime) > 4E-7){
+        if (Math.abs(end - start)/ Math.abs(endtime-starttime) > 1E-8){
             isSpinning = true;
         }
 
