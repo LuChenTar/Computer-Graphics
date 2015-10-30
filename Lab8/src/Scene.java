@@ -37,13 +37,13 @@ public class Scene extends ArrayList<Sphere> {
 
 			double a =  0.2f;
 			double d =  0.8f * lightingPosition.normalize().dot(normal);
-			double s =  1.0f * reflection.dot(r.direction.normalize());
+			double s =  1.0f * Math.pow(reflection.dot(r.direction.normalize()), 50.0);
 
-			float value =(float) Math.max(Math.min((a + d + s), 1.0f), 0.0f);
+			float redvalue =(float) Math.max(Math.min(((a + d) * hit.color.getRed()  + 255.0f * s), 255.0f), 0.0f);
+			float greenvalue =(float) Math.max(Math.min(((a + d) * hit.color.getGreen()  + 255.0f * s), 255.0f), 0.0f);
+			float bluevalue =(float) Math.max(Math.min(((a + d) * hit.color.getBlue()  + 255.0f * s), 255.0f), 0.0f);
 
-//			return hit.color;
-
-			Color finalColor = new Color((int) (hit.color.getRed() * value), (int) (hit.color.getGreen() *value),(int) (hit.color.getBlue()*value));
+			Color finalColor = new Color((int) redvalue, (int) greenvalue ,(int) bluevalue);
 
 			return finalColor;
 

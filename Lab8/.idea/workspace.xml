@@ -2,24 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a8e5f53-de17-4ebf-b742-87c64d0a63a3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Freehand/DrawArea.class" afterPath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Freehand/DrawArea.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1/out/production/Lab1/Line$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1/out/production/Lab1/Line$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1/out/production/Lab1/Line$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1/out/production/Lab1/Line$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab1/out/production/Lab1/Line.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/Circle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/GameComponent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/Hold.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/Joint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/LittleWall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/PlayerSpring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/Points.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/Spring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/TestAngleSpring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/Wall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/XYPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/PatternClimber/XYPointTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/Circle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/GameComponent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/Hold.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/Joint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/LittleWall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/PlayerSpring$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/PlayerSpring$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/PlayerSpring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/Points.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/Spring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/TestAngleSpring.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/Wall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/XYPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab2/out/production/Lab2/SimpleClimber/XYPointTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Freehand/DrawArea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Freehand/DrawIt$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Freehand/DrawIt$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Freehand/DrawIt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Freehand/ToolBar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Vector/DrawArea.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Vector/DrawIt$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Vector/DrawIt$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Vector/DrawIt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab3/out/production/Lab3/Vector/ToolBar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Lab5/target/classes/ScreenSaverOGL.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab8/Scene.class" afterPath="$PROJECT_DIR$/out/production/Lab8/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/target/classes/ScreenSaverOGL.class" afterPath="$PROJECT_DIR$/../Lab5/target/classes/ScreenSaverOGL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6-7/target/classes/SpinningDoll.class" afterPath="$PROJECT_DIR$/../Lab6-7/target/classes/SpinningDoll.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab3/src/Freehand/DrawArea.java" afterPath="$PROJECT_DIR$/../Lab3/src/Freehand/DrawArea.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/Lab5.iml" afterPath="$PROJECT_DIR$/../Lab5/Lab5.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scene.java" afterPath="$PROJECT_DIR$/src/Scene.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/src/main/java/ScreenSaverOGL.java" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/ScreenSaverOGL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6-7/src/main/java/SpinningDoll.java" afterPath="$PROJECT_DIR$/../Lab6-7/src/main/java/SpinningDoll.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../Lab5/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/pom.xml" afterPath="$PROJECT_DIR$/../Lab5/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab3/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Lab6-7/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Lab6-7/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab8.iws" />
@@ -46,8 +81,8 @@
       <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3987976">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.72243345">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -135,8 +170,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="102" />
-    <option name="y" value="23" />
+    <option name="x" value="153" />
+    <option name="y" value="38" />
     <option name="width" value="1122" />
     <option name="height" value="777" />
   </component>
@@ -164,6 +199,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -199,7 +235,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -465,14 +500,18 @@
       <workItem from="1445479729828" duration="3026000" />
       <workItem from="1445829303150" duration="2737000" />
       <workItem from="1445833464818" duration="1393000" />
+      <workItem from="1445855536362" duration="29000" />
+      <workItem from="1446095279842" duration="522000" />
+      <workItem from="1446165827098" duration="201000" />
+      <workItem from="1446197911951" duration="269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16342000" />
+    <option name="totallyTimeSpent" value="17363000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="23" width="1122" height="777" extended-state="0" />
+    <frame x="153" y="38" width="1122" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -513,6 +552,166 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/RayTracer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/P3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTracer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/P3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTracer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/P3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTracer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/P3D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -709,10 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33264464">
           <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="false" />
-            <element signature="e#10148#10149#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -758,8 +953,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3987976">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.72243345">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
           <folding />
         </state>
       </provider>
