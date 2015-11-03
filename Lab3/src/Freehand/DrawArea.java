@@ -81,35 +81,35 @@ public class DrawArea extends JComponent implements MouseMotionListener,
 				y1 = currentList.get(i).y;
 				x2 = currentList.get(i + 1).x;
 				y2 = currentList.get(i + 1).y;
-				//drawing
-				if(!drawit.colorToolbar.getSelectCommand().equals((Object) Color.WHITE)) {
-					//set up the graphics color
-					if (drawit.colorToolbar.getSelectCommand().equals((Object) Color.RED)) {
-						g.setColor(new Color(1, 0, 0, alpha));
-					} else if (drawit.colorToolbar.getSelectCommand().equals((Object) Color.BLUE)) {
-						g.setColor(new Color(0, 0, 1, alpha));
-					} else if (drawit.colorToolbar.getSelectCommand().equals((Object) Color.GREEN)) {
-						g.setColor(new Color(0, 1, 0, alpha));
-					}
-					//set up the painting brush
-					//normal painting brush with different thickness
-					if (((Integer) drawit.thicknessToolbar.getSelectCommand() < 11)) {
-						g.setStroke(new BasicStroke((Integer) drawit.thicknessToolbar.getSelectCommand()));
-						g.drawLine(x1, y1, x2, y2);
-						//spray painter
-					} else if ((Integer) drawit.thicknessToolbar.getSelectCommand() == 13) {
-						sprayPaint(x1, y1, g);
-					//smudge
-					}else if((Integer) drawit.thicknessToolbar.getSelectCommand() == 12) {
-
-					}else if((Integer) drawit.thicknessToolbar.getSelectCommand() == 14) {
-						floodFill(x1, y1, g);
-					}
-				//erasing
-				}else if(drawit.colorToolbar.getSelectCommand().equals((Object) Color.WHITE)) {
-					g.setColor(Color.white);
-					g.fillRect(x1, y1, 12, 12);
+			}
+			//drawing
+			if(!drawit.colorToolbar.getSelectCommand().equals((Object) Color.WHITE)) {
+				//set up the graphics color
+				if (drawit.colorToolbar.getSelectCommand().equals((Object) Color.RED)) {
+					g.setColor(new Color(1, 0, 0, alpha));
+				} else if (drawit.colorToolbar.getSelectCommand().equals((Object) Color.BLUE)) {
+					g.setColor(new Color(0, 0, 1, alpha));
+				} else if (drawit.colorToolbar.getSelectCommand().equals((Object) Color.GREEN)) {
+					g.setColor(new Color(0, 1, 0, alpha));
 				}
+				//set up the painting brush
+				//normal painting brush with different thickness
+				if (((Integer) drawit.thicknessToolbar.getSelectCommand() < 11)) {
+					g.setStroke(new BasicStroke((Integer) drawit.thicknessToolbar.getSelectCommand()));
+					g.drawLine(x1, y1, x2, y2);
+					//spray painter
+				} else if ((Integer) drawit.thicknessToolbar.getSelectCommand() == 13) {
+					sprayPaint(x1, y1, g);
+					//smudge
+				}else if((Integer) drawit.thicknessToolbar.getSelectCommand() == 12) {
+
+				}else if((Integer) drawit.thicknessToolbar.getSelectCommand() == 14) {
+					floodFill(x1, y1, g);
+				}
+				//erasing
+			}else if(drawit.colorToolbar.getSelectCommand().equals((Object) Color.WHITE)) {
+				g.setColor(Color.white);
+				g.fillRect(x1, y1, 12, 12);
 			}
 		}
 //		g.fill(new Ellipse2D.Double(m.getX() - 1.0, m.getY() - 1.0, 2.0, 2.0));
@@ -146,6 +146,8 @@ public class DrawArea extends JComponent implements MouseMotionListener,
 			currentList.add(e.getPoint());
 			currentList = null;
 		}
+//		System.out.println("released");
+
 	}
 
 	private void smudge() {
